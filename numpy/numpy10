@@ -1,0 +1,48 @@
+import numpy as np
+arr = np.arange(1,4)
+print(arr)
+print(4 + arr)
+
+arr1 = np.arange(1,7).reshape(2,3)
+print(arr1)
+print(10 + arr1)
+
+arr2 = np.arange(1,9).reshape(2,2,2)
+print(arr2)
+print(10 + arr2)
+
+arr = np.arange(1,4)
+print(arr)
+print(4 - arr)
+
+arr1 = np.arange(1,7).reshape(2,3)
+print(arr1)
+print(10 - arr1)
+
+arr2 = np.arange(1,9).reshape(2,2,2)
+print(arr2)
+print(10 - arr2)
+
+arr = np.arange(1,4)
+print(arr)
+print(4 * arr)
+
+arr1 = np.arange(1,7).reshape(2,3)
+print(arr1)
+print(10 * arr1)
+
+arr2 = np.arange(1,9).reshape(2,2,2)
+print(arr2)
+print(10 * arr2)
+
+arr = np.arange(1,4)
+print(arr)
+print(4 / arr)
+
+arr1 = np.arange(1,7).reshape(2,3)
+print(arr1)
+print(10 / arr1)
+
+arr2 = np.arange(1,9).reshape(2,2,2)
+print(arr2)
+print(10 / arr2)
