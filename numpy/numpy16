@@ -1,0 +1,33 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 100)
+y1 = (x ** 2) + 2 * x
+y2 = 3 * (x ** 3) + 2 * (x ** 2) + x - 10
+y3 = np.exp(x)
+y4 = np.exp(-x)
+fig, axes = plt.subplots(4, 1, figsize=(10, 10), sharex=True)
+
+axes[0].plot(x, y1)
+axes[0].set_title(r"$f(x) = x^2 + 2x$")
+
+axes[1].plot(x, y2)
+axes[1].set_title(r"$f(x) = 3x^3 + 2x^2 + x - 10$")
+
+axes[2].plot(x, y3)
+axes[2].set_title(r"$f(x) = e^x$")
+
+axes[3].plot(x, y4)
+axes[3].set_title(r"$f(x) = e^{-x}$")
+
+
+for ax in axes:
+    ax.axhline(y=0, color="gray")
+    ax.axvline(x=0, color="gray")
+    ax.tick_params(labelsize=12)
+    ax.grid(True)
+fig.tight_layout()
+plt.show()
+
+
+
