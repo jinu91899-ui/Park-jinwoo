@@ -1,0 +1,19 @@
+import numpy as np
+zero_scalar = np.zeros(shape=())
+zero_vector = np.zeros(shape=(3,))
+zero_matrix = np.zeros(shape=(3, 3))
+zero_tensor = np.zeros(shape=(2,3,3))
+
+print("Scalar:")
+print(zero_scalar)
+
+print("\nVector:")
+print(zero_vector)
+
+print("\nMatrix:")
+print(zero_matrix)
+
+print("\nTensor:")
+print(zero_tensor)
+
+
