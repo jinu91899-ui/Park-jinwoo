@@ -1,0 +1,21 @@
+import numpy as np
+
+arr = np.arange(-5, 6)
+print(np.positive(arr), "\n")
+print(arr.__pos__(), "\n")
+print(+arr, "\n")
+
+arr1 = np.arange(6).reshape(2,3)
+print(np.positive(arr1), "\n")
+print(arr1.__pos__(), "\n")
+print(+arr1)
+
+arr = np.arange(-5, 6)
+print(np.negative(arr), "\n")
+print(arr.__neg__(), "\n")
+print(-arr, "\n")
+
+arr1 = np.arange(6).reshape(2,3)
+print(np.negative(arr1), "\n")
+print(arr1.__neg__(), "\n")
+print(-arr1)
