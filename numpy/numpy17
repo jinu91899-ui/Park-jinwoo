@@ -1,0 +1,16 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 100)
+y1 = 1 / (1 + np.exp(-x))
+y2 = (np.exp(x) - np.exp(-x)) / (np.exp(x) + np.exp(-x))
+
+fig, ax = plt.subplots(figsize = (20,5))
+ax.plot(x, y1, label = f"$f(x) = 1 / (1 + e^(-x))$")
+ax.plot(x, y2, label = f"$f(x) = e^(-x) + e^(-x) / e^(x) +e^(-x)$")
+ax.axhline(y=0, color="gray")
+ax.axvline(x=0, color="gray")
+ax.tick_params(labelsize=12)
+fig.tight_layout()
+ax.grid(True)
+plt.show()
