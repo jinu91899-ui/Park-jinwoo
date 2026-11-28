@@ -1,0 +1,7 @@
+import numpy as np
+student_scores1 = np.array([80,90,100])
+student_scores2 = np.array([70,80,90])
+student_scores3 = np.array([60,70,80])
+print(f"{type(student_scores1) = }\t {student_scores1.ndim = }\t {student_scores1.shape = }")
+print(f"{type(student_scores2) = }\t {student_scores2.ndim = }\t {student_scores2.shape = }")
+print(f"{type(student_scores3) = }\t {student_scores3.ndim = }\t {student_scores3.shape = }")
