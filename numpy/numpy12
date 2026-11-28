@@ -1,0 +1,16 @@
+from numpy.random import randint
+from numpy.random import uniform
+import numpy as np
+
+arr = randint(0, 10, 10)
+print(arr)
+
+arr1 = randint(0, 10, (2,3))
+print(arr1)
+
+arr = uniform(0, 10, 10).round(3)
+print(arr)
+
+arr1 = uniform(0, 10, (2,3)).round(3)
+print(arr1)
+
