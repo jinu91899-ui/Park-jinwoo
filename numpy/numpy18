@@ -1,0 +1,42 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from math import factorial
+
+x = np.linspace(-2 * np.pi, 2 * np.pi + 1, 100)
+y_true = np.sin(x)
+y1 = x
+y2 = y1 - (x ** 3) / factorial(3)
+y3 = y2 + (x ** 5) / factorial(5)
+y4 = y3 - (x ** 7) / factorial(7)
+y5 = y4 + (x ** 9) / factorial(9)
+y6 = y5 - (x ** 11) / factorial(11)
+y_true2 = np.cos(x)
+y7 = np.ones_like(x)
+y8 = y7 - (x ** 2) / factorial(2)
+y9 = y8 + (x ** 4) / factorial(4)
+y10 = y9 - (x ** 6) / factorial(6)
+y11 = y10 + (x ** 8) / factorial(8)
+y12 = y11 - (x ** 10) / factorial(10)
+
+fig, axes = plt.subplots(2, 1, figsize=(10, 10), sharex=True)
+
+for order, y in enumerate([y1, y2, y3, y4, y5, y6], start=1):
+    axes[0].plot(x, y, label=f"Taylor order {order}")
+axes[0].plot(x, y_true, color="black", zorder=10, label="sin(x)")
+axes[0].set_title("Taylor Approximation of Sin", fontsize=20)
+
+for order, y in enumerate([y7, y8, y9, y10, y11, y12], start=1):
+    axes[1].plot(x, y, label=f"Taylor order {order}")
+axes[1].plot(x, y_true2, color="black", zorder=10, label="cos(x)")
+axes[1].set_title("Taylor Approximation of Cos", fontsize=20)
+
+for ax in axes:
+    ax.axhline(y=0, color="gray")
+    ax.axvline(x=0, color="gray")
+    ax.tick_params(labelsize=12)
+    ax.grid()
+    ax.set_ylim([-2, 2])
+    ax.legend()
+
+fig.tight_layout()
+plt.show()
