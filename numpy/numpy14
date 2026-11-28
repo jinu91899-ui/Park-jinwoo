@@ -1,0 +1,46 @@
+from numpy.random import randint
+import numpy as np
+
+u = randint(1, 6, 4)
+v = randint(1, 6, 4)
+print(f"u: {u}")
+print(f"v: {v}")
+print(f"{u + v = } / {u.__add__(v) = }")
+print(f"{u - v = } / {u.__sub__(v) = }")
+print(f"{u * v = } / {u.__mul__(v) = }")
+print(f"{u ** v = } / {u.__pow__(v) = }")
+print(f"{(u / v).round(2) = } / {(u.__truediv__(v)).round(2) = }")
+print(f"{u // v = } / {u.__floordiv__(v) = }")
+print(f"{u % v = } / {u.__mod__(v) = }")
+
+m = randint(1, 6, (2,3))
+n = randint(1, 6, (2,3))
+
+print(f"m:{m}")
+print(f"n:{n}")
+
+print(f"m + n: {m + n} / {m.__add__(n)}")
+print(f"m - n: {m - n} / {m.__sub__(n)}")
+print(f"m * n: {m * n} / {m.__mul__(n)}")
+print(f"m ** n: {m ** n} / {m.__pow__(n)}")
+print(f"m / n: {(m / n).round(2)} / {(m.__truediv__(n)).round(2)}")
+print(f"m // n: {m // n} / {m.__floordiv__(n)}")
+print(f"m % n: {m % n} / {m.__mod__(n)}")
+
+M = randint(1, 6, (3,3,3))
+N = randint(1, 6, (3,3,3))
+
+print(f"M:{M}")
+print(f"N:{N}")
+
+print(f"M + N: {M + N} / {M.__add__(N)}")
+print(f"M - N: {M - N} / {M.__sub__(N)}")
+print(f"M * N: {M * N} / {M.__mul__(N)}")
+print(f"M ** N: {M ** N} / {M.__pow__(N)}")
+print(f"M / N: {(M / N).round(2)} / {(M.__truediv__(N)).round(2)}")
+print(f"M // N: {M // N} / {M.__floordiv__(N)}")
+print(f"M % N: {M % N} / {M.__mod__(N)}")
+
+
+
+
